@@ -61,6 +61,8 @@ src/
     ├── Hero.jsx
     ├── LogoTicker.jsx
     └── Testimonial.jsx
+    
+---
 
 ## 👨‍💻 Developed by Yeachen Abir
 

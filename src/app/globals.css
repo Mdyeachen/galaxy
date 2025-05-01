@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+body{
+    font-size: 1rem;
+}
+
+.container{
+    padding : 0 80px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+

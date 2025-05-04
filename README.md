@@ -10,8 +10,8 @@
 
 <p align="center">
   <img src="preview/galaxy-protfolio-nextjs-project.png" width="100%" alt="Desktop Preview" />
-  <img src="preview/galaxy-protfolio-nextjs-project-tablet.png" width="60%" alt="Tablet Preview" />
-  <img src="preview/galaxy-protfolio-nextjs-project-mobile.png" width="38%" alt="Mobile Preview" />
+  <img src="preview/galaxy-protfolio-nextjs-project-tablet.png" width="66%" alt="Tablet Preview" />
+  <img src="preview/galaxy-protfolio-nextjs-project-mobile.png" width="33%" alt="Mobile Preview" />
 </p>
 
 ---

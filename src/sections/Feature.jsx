@@ -27,7 +27,7 @@ const Features = () => {
             <div className="container mx-auto">
                 <div className="flex flex-col gap-12">
                     <div className="common-header text-center max-w-2xl mx-auto flex flex-col gap-4">
-                        <h2 className="text-6xl md:text-8xl font-medium tracking-tight">Features</h2>
+                        <h2 className="text-5xl md:text-7xl font-medium tracking-tight">Features</h2>
                         <p className="text-white/70 text-lg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic numquam aliquid amet asperiores laborum nemo facilis</p>
                     </div>
 
@@ -45,7 +45,7 @@ const Features = () => {
                         </div>
 
                         <div className="border border-white/20 rounded-3xl p-4 ">
-                            <div className="aspect-video bg-cover border border-white/20 rounded-3xl"
+                            <div className="aspect-video bg-cover border border-white/20 rounded-3xl mix-blend-luminosity"
                                 style={{
                                     backgroundImage : `url(${deshboardImg.src})`
                                 }}

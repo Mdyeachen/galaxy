@@ -29,11 +29,11 @@ const Testimonial = () => {
                 <div className="container mx-auto">
                     <div className="flex flex-col gap-12">
                         <div className="common-header text-center max-w-2xl mx-auto flex flex-col gap-4">
-                            <h2 className="text-6xl md:text-8xl font-medium tracking-tight capitalize">beyond expectation</h2>
-                            <p className="text-white/70 text-lg"></p>
+                            <h2 className="text-5xl md:text-7xl font-medium tracking-tight capitalize">beyond expectation</h2>
+                            <p className="text-white/70 text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, cum rem! Hic alias vitae maiores recusandae commodi officiis.</p>
                         </div>
 
-                        <div className="testimonials flex flex-none gap-14 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
+                        <div className="testimonials flex flex-none gap-14 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_75%,transparent)]">
 
                             {testiMon.map((profile,index) => (
                                 <div key={index} className="border border-white/20 p-6 rounded-xl bg-[linear-gradient(to_bottom_left,rgb(140,69,266,.5),black)] text-lg min-w-80 flex flex-col gap-8">

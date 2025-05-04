@@ -9,9 +9,9 @@
 ![Web Developers Landing Page Banner](preview/banner.png)
 
 <p align="center">
-  <img src="preview/galaxy-protfolio-nextjs-project.png" width="38%" alt="Desktop Preview" />
-  <img src="preview/galaxy-protfolio-nextjs-project-tablet.png" width="28%" alt="Tablet Preview" />
-  <img src="preview/galaxy-protfolio-nextjs-project-mobile.png" width="28%" alt="Mobile Preview" />
+  <img src="preview/galaxy-protfolio-nextjs-project.png" width="39%" alt="Desktop Preview" />
+  <img src="preview/galaxy-protfolio-nextjs-project-tablet.png" width="29%" alt="Tablet Preview" />
+  <img src="preview/galaxy-protfolio-nextjs-project-mobile.png" width="29%" alt="Mobile Preview" />
 </p>
 
 ---

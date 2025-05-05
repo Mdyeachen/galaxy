@@ -1,12 +1,37 @@
+"use client"
+
+import { motion, useScroll, useTransform } from "framer-motion"
 import { Button } from "@/component/button";
 import Planet from "@/component/panet";
 import starBg from "@/assets/stars.png"
+import { useRef } from "react";
 
 const Hero = () => {
+    const sectionRef = useRef(null);
+
+    const { scrollYProgress } = useScroll({
+        target : sectionRef,
+        offset : ["start end",'end start']
+    })
+
+    const backgroundPositionY = useTransform(scrollYProgress, [0, 1], [-300, 300])
+
     return (
-        <section className="hero_section min-h-[100vh] flex items-center bg-center bg-no-repeat bg-cover relative overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]" style={{
-            backgroundImage : `url(${starBg.src})`
-        }}>
+        <motion.section
+        ref = {sectionRef}
+        className="hero_section min-h-[100vh] flex items-center bg-no-repeat bg-[length:auto_100%] bg-[position:0%_50%] relative overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]" 
+        style={{
+            backgroundImage: `url(${starBg.src})`,
+            backgroundPositionY
+        }}
+        initial={{ backgroundPositionX: "100%" }}
+        animate={{ backgroundPositionX: "0%" }}
+        transition={{
+            repeat : Infinity,
+            ease : "linear",
+            duration : 30
+        }}
+        >
             <Planet />
             <div className="container mx-auto relative">
                 <div className="flex flex-col gap-4 justify-center items-center max-w-2xl mx-auto text-center">
@@ -15,7 +40,7 @@ const Hero = () => {
                     <Button>Yeachen Abir</Button>
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }
 

@@ -6,8 +6,6 @@
 
 ## 🖼️ Template Preview
 
-![Web Developers Landing Page Banner](preview/banner.png)
-
 <p align="center">
   <img src="preview/galaxy-protfolio-nextjs-project.png" width="100%" alt="Desktop Preview" />
   <img src="preview/galaxy-protfolio-nextjs-project-tablet.png" width="66%" alt="Tablet Preview" />

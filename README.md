@@ -35,6 +35,21 @@
 
 ---
 
+
+## 💡 Why Choose the Bold Template?
+
+✅ SEO-Friendly Markup  
+✅ Fast & Responsive Layout  
+✅ One Page Simplicity  
+✅ Built With HTML5, CSS3 & Bootstrap  
+✅ Developer Friendly & Easy to Customize  
+
+---
+
+> 🚀 Use this template to launch your business site, portfolio, or client project quickly and effectively.
+
+---
+
 ## 📁 Folder Structure
 
 ```bash
@@ -95,18 +110,6 @@ I am a passionate **Full-Stack Developer** with a strong focus on **custom websi
 - 📬 Email: [yeachenabir@gmail.com](mailto:yeachenabir@gmail.com)
 
 ---
-
-## 💡 Why Choose the Galaxy Stitc Template?
-
-✅ SEO-Friendly Markup  
-✅ Fast & Responsive Layout  
-✅ One Page Simplicity  
-✅ Built With HTML5, CSS3, Tailwind CSS, React, Next, Frame Motion
-✅ Developer Friendly & Easy to Customize  
-
----
-
-> 🚀 Use this template to launch your business site, portfolio, or client project quickly and effectively.
 
 **#yeachen #abir #webdeveloper #shopify #wordpress #ecommerce #custom_website #react_developer #next_developer #full_stack_developer**
 

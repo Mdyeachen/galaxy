@@ -9,7 +9,7 @@
 <p align="center">
   <img src="preview/galaxy-protfolio-nextjs-project.png" width="100%" alt="Desktop Preview" />
   <img src="preview/galaxy-protfolio-nextjs-project-tablet.png" width="66%" alt="Tablet Preview" />
-  <img src="preview/galaxy-protfolio-nextjs-project-mobile.png" width="33.5%" alt="Mobile Preview" />
+  <img src="preview/galaxy-protfolio-nextjs-project-mobile.png" width="33%" alt="Mobile Preview" />
 </p>
 
 ---
@@ -111,6 +111,6 @@ I am a passionate **Full-Stack Developer** with a strong focus on **custom websi
 
 ---
 
-**#yeachen #abir #webdeveloper #shopify #wordpress #ecommerce #custom_website #react_developer #next_developer #full_stack_developer**
+**#yeachen #abir #webdeveloper #shopify #wordpress #ecommerce #custom_website #react_developer #next_developer #fontend_developer #full_stack_developer**
 
 ---

@@ -96,12 +96,12 @@ I am a passionate **Full-Stack Developer** with a strong focus on **custom websi
 
 ---
 
-## 💡 Why Choose the Bold Template?
+## 💡 Why Choose the Galaxy Stitc Template?
 
 ✅ SEO-Friendly Markup  
 ✅ Fast & Responsive Layout  
 ✅ One Page Simplicity  
-✅ Built With HTML5, CSS3 & Bootstrap  
+✅ Built With HTML5, CSS3, Tailwind CSS, React, Next, Frame Motion
 ✅ Developer Friendly & Easy to Customize  
 
 ---

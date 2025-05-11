@@ -6,7 +6,8 @@ import click from "@/assets/Lottie/click.json";
 import star from "@/assets/Lottie/star.json";
 
 import deshboardImg from "@/assets/feature-ana.png"
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import { animate, motion, useMotionTemplate, useMotionValue } from "framer-motion";
 
 
 const tabdata = [
@@ -31,25 +32,42 @@ const Features = () => {
 
     const FeatureTab = (tab) => {
 
-        const lottieRef = useRef(null);
-        const handleTabHover = () => {
-            console.log(lottieRef.current)
-            const lottieInstance = lottieRef.current?.getLottie?.();
-            if(lottieInstance) {
-                lottieInstance.pause()
+        const xPercentage = useMotionValue(0);
+        const yPercentage = useMotionValue(50);
+        const maskImage = useMotionTemplate`radial-gradient(80px 80px at ${xPercentage}% ${yPercentage}%,black,transparent)`
+
+        useEffect(() => {
+            const valueOption = {
+                duration : 4,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease : "linear"
             }
 
+
+            animate(xPercentage,[0,100,100,0, 0], valueOption)
+            animate(yPercentage,[0,0,100,100,0], valueOption)
+        }, [])
+
+        const lottieRef = useRef(null);
+        const handleTabHover = () => {
+            lottieRef.current.goToAndPlay(0, true)
         }
 
         return (
             <div 
             onMouseEnter={handleTabHover}
-            className="flex gap-4 items-center border border-white/20 rounded-sm p-2.5 text-white/70">
+            className="flex gap-4 items-center border border-white/20 rounded-xl p-2.5 text-white/70 relative">
+                <motion.div 
+                style={{
+                    maskImage
+                }}
+                className="absolute inset-0 border rounded-xl border-[#a369ff] "></motion.div>
                 <div className="border border-white/20 rounded-xl p-1">
                     <Lottie 
                     lottieRef={lottieRef}
                     animationData={tab.icon} 
-                    loop={true} 
+                    loop={false} 
                     className="h-6 w-6"/>
                 </div>
                 <h3>{tab.title}</h3>

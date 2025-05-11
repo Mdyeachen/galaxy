@@ -1,3 +1,7 @@
+"use client"
+
+import { motion } from "framer-motion";
+
 import acme from "@/assets/logo-ticker/acme.png";
 import apex from "@/assets/logo-ticker/apex.png";
 import echo from "@/assets/logo-ticker/echo.png";
@@ -5,6 +9,8 @@ import pulse from "@/assets/logo-ticker/pulse.png";
 import quatam from "@/assets/logo-ticker/quatam.png";
 
 const LogoTicker = () => {
+    const logo = [acme,apex,echo,pulse,quatam];
+
     return (
         <>
           <section className="logoTicker py-20 md:py-24">
@@ -13,12 +19,22 @@ const LogoTicker = () => {
                 <div className="flex-1 md:flex-none font-black text-white/80 italic">
                     <h2>Trust by top innovating teams</h2>
                 </div>
-                <div className="flex-1 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
-                <div className="logo flex flex-none gap-14 ">
-                    {[acme,apex,echo,pulse,quatam].map((logo, index) => (
+                <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
+                <motion.div 
+                initial={{translateX : "-90%" }}
+                animate={{
+                    translateX : "0%"
+                }}
+                transition={{
+                    repeat : Infinity,
+                    duration: 30,
+                    ease : "linear"
+                }}
+                className="logo flex flex-none gap-14">
+                    {[...logo, ...logo].map((logo, index) => (
                         <img key={index} src={logo.src} alt={`logo-${index}`} className="h-18 w-auto" />
                     ))}
-                </div>
+                </motion.div>
                 </div>
                 </div>
             </div>

@@ -1,14 +1,13 @@
 "use client"
 
-import Lottie from "lottie-react";
+
 import speed from "@/assets/Lottie/speed.json";
 import click from "@/assets/Lottie/click.json";
 import star from "@/assets/Lottie/star.json";
 
 import deshboardImg from "@/assets/feature-ana.png"
-import { useEffect, useRef } from "react";
-import { animate, motion, useMotionTemplate, useMotionValue } from "framer-motion";
-
+import Tab from "@/component/tab"
+import { useState } from "react";
 
 const tabdata = [
   {
@@ -23,58 +22,13 @@ const tabdata = [
   }, 
   {
     icon: star,
-    title: "Smart Keyword Generator", // Fixed typo
+    title: "Smart Keyword Generator",
     status: true
   }
 ];
 
 const Features = () => {
-
-    const FeatureTab = (tab) => {
-
-        const xPercentage = useMotionValue(0);
-        const yPercentage = useMotionValue(50);
-        const maskImage = useMotionTemplate`radial-gradient(80px 80px at ${xPercentage}% ${yPercentage}%,black,transparent)`
-
-        useEffect(() => {
-            const valueOption = {
-                duration : 4,
-                repeat: Infinity,
-                repeatType: "loop",
-                ease : "linear"
-            }
-
-
-            animate(xPercentage,[0,100,100,0, 0], valueOption)
-            animate(yPercentage,[0,0,100,100,0], valueOption)
-        }, [])
-
-        const lottieRef = useRef(null);
-        const handleTabHover = () => {
-            lottieRef.current.goToAndPlay(0, true)
-        }
-
-        return (
-            <div 
-            onMouseEnter={handleTabHover}
-            className="flex gap-4 items-center border border-white/20 rounded-xl p-2.5 text-white/70 relative">
-                <motion.div 
-                style={{
-                    maskImage
-                }}
-                className="absolute inset-0 border rounded-xl border-[#a369ff] "></motion.div>
-                <div className="border border-white/20 rounded-xl p-1">
-                    <Lottie 
-                    lottieRef={lottieRef}
-                    animationData={tab.icon} 
-                    loop={false} 
-                    className="h-6 w-6"/>
-                </div>
-                <h3>{tab.title}</h3>
-                <p className="text-black border bg-purple-500 text-xs uppercase py-.5 px-2 rounded-xl">{tab.status && "New"}</p>
-            </div>
-        )
-    }
+     const [selectedIndex, setSelectedIndex] = useState(null);
 
     return (
         <section className="features py-20 md:py-24">
@@ -88,7 +42,13 @@ const Features = () => {
                     <div className="feature-items flex flex-col gap-4">
                         <div className="flex gap-4 justify-center flex-wrap">
                             {tabdata.map((tab, index) => (
-                                <FeatureTab key={index} {...tab} />
+                                <Tab 
+                                key={index} 
+                                title={tab.title} 
+                                icon={tab.icon} 
+                                status={tab.status}
+                                isSelected={selectedIndex === index}
+                                onSelect={() => setSelectedIndex(index)} />
                             ))}
                         </div>
 

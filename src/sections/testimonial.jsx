@@ -1,7 +1,9 @@
+"use client"
+
 import team01 from "@/assets/teams/01.png";
 import team02 from "@/assets/teams/02.png"
 import team03 from "@/assets/teams/03.png"
-
+import { motion } from "framer-motion";
 
 const testiMon = [
     {
@@ -34,26 +36,36 @@ const Testimonial = () => {
                             <p className="text-white/70 text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, cum rem! Hic alias vitae maiores recusandae commodi officiis.</p>
                         </div>
 
-                        <div className="testimonials flex flex-none gap-14 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_75%,transparent)]">
-
-                            {testiMon.map((profile,index) => (
-                                <div key={index} className="border border-white/20 p-6 rounded-xl bg-[linear-gradient(to_bottom_left,rgb(140,69,266,.5),black)] text-lg min-w-80 flex flex-col gap-8">
-                                    <p className="text-white/70 font-medium">{profile.des}</p>
-                                    <div className="flex gap-4">
-                                        <div className="relative after:absolute after:content-[''] after:inset-0 after:bg-[rgb(140,69,244) after:mix-blend-soft-light]">
-                                            <img 
-                                            src={profile.image.src} 
-                                            alt={`avatar for ${profile.name}`} 
-                                            className="w-12 h-12 border border-white/30m grayscale rounded-lg"/>
-                                        </div>
-                                        <div>
-                                            <h3>{profile.name}</h3>
-                                            <h4 className="text-sm text-white/70">{profile.title}</h4>
+                        <div className="testimonials overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_75%,transparent)]">
+                            <motion.div 
+                            animate = {{
+                                x: ["0%", "-50%"]
+                            }}
+                            transition={{
+                                repeat : Infinity,
+                                duration : 30,
+                                ease : "linear"
+                            }}
+                            className="flex flex-none gap-5 pr-5 w-fit ">
+                                {[...testiMon, ...testiMon].map((profile,index) => (
+                                    <div key={index} className="border border-white/20 p-6 rounded-xl bg-[linear-gradient(to_bottom_left,rgb(140,69,266,.5),black)] text-lg min-w-80 flex flex-col gap-8">
+                                        <p className="text-white/70 font-medium">{profile.des}</p>
+                                        <div className="flex gap-4">
+                                            <div className="relative after:absolute after:content-[''] after:inset-0 after:bg-[rgb(140,69,244) after:mix-blend-soft-light]">
+                                                <img 
+                                                src={profile.image.src} 
+                                                alt={`avatar for ${profile.name}`} 
+                                                className="w-12 h-12 border border-white/30m grayscale rounded-lg"/>
+                                            </div>
+                                            <div>
+                                                <h3>{profile.name}</h3>
+                                                <h4 className="text-sm text-white/70">{profile.title}</h4>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            ))}
-                            
+                                ))}
+                            </motion.div>
+
                         </div>
                     </div>
                 </div>

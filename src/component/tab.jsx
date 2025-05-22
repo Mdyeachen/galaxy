@@ -30,7 +30,7 @@ const Tab = ({icon, title, status, isSelected, onSelect}) => {
 
         const animateOption = {
             times,
-            duration : 4,
+            duration : 3,
             repeat : Infinity,
             ease : "linear",
             repeatType : "loop"

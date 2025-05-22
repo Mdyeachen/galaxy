@@ -2,6 +2,7 @@ import team01 from "@/assets/teams/01.png";
 import team02 from "@/assets/teams/02.png"
 import team03 from "@/assets/teams/03.png"
 
+
 const testiMon = [
     {
         des : "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic numquam aliquid amet asperiores laborum nemo facilis",

@@ -8,28 +8,63 @@ import star from "@/assets/Lottie/star.json";
 import deshboardImg from "@/assets/feature-ana.png"
 import Tab from "@/component/tab"
 import { useState } from "react";
+import { animate, motion, useMotionTemplate, useMotionValue } from "framer-motion";
 
 const tabdata = [
   {
     icon: speed,
     title: "User Friendly Dashboard",
-    status: false
-  }, 
+    status: false,
+    backgroundSizeX : 100,
+    backgroundPositionX : 0,
+    backgroundPositionY : 0
+    }, 
   {
     icon: click,
     title: "One Click Optimization",
-    status: false
-  }, 
+    status: true,
+    backgroundSizeX : 177,
+    backgroundPositionX : 98,
+    backgroundPositionY : 100
+    }, 
   {
     icon: star,
     title: "Smart Keyword Generator",
-    status: true
-  }
+    status: true,
+    backgroundSizeX : 150,
+    backgroundPositionX : 100,
+    backgroundPositionY : 27
+    }
 ];
 
 const Features = () => {
      const [selectedIndex, setSelectedIndex] = useState(null);
 
+
+     const backgroundPositionX = useMotionValue(tabdata[0].backgroundPositionX);
+     const backgroundPositionY = useMotionValue(tabdata[0].backgroundPositionY);
+     const backgroundSizeX = useMotionValue(tabdata[0].backgroundSizeX);
+
+     // template
+     const backgroundSize = useMotionTemplate`${backgroundSizeX}% auto`
+     const backgroundPosition = useMotionTemplate`${backgroundPositionX}% ${backgroundPositionY}%`
+
+
+    
+     const handleSelectedTab = (index) => {
+        setSelectedIndex(index);
+
+        // animation part
+        const animationOption = {
+            duration : 2,
+            ease : "easeInOut"
+        }
+        animate(backgroundSizeX, [backgroundSizeX.get(), 100, tabdata[index].backgroundSizeX], animationOption);
+        animate(backgroundPositionX, [backgroundPositionX.get(), 100, tabdata[index].backgroundPositionX], animationOption);
+        animate(backgroundPositionY, [backgroundPositionY.get(), 100, tabdata[index].backgroundPositionY], animationOption);
+
+     }
+     
     return (
         <section className="features py-20 md:py-24">
             <div className="container mx-auto">
@@ -48,16 +83,18 @@ const Features = () => {
                                 icon={tab.icon} 
                                 status={tab.status}
                                 isSelected={selectedIndex === index}
-                                onSelect={() => setSelectedIndex(index)} />
+                                onSelect={() => handleSelectedTab(index)} />
                             ))}
                         </div>
 
                         <div className="border border-white/20 rounded-3xl p-4 ">
-                            <div className="aspect-video bg-cover border border-white/20 rounded-3xl mix-blend-luminosity"
+                            <motion.div className="aspect-video bg-cover border border-white/20 rounded-3xl"
                                 style={{
+                                    backgroundSize,
+                                    backgroundPosition,
                                     backgroundImage : `url(${deshboardImg.src})`
                                 }}
-                            ></div>
+                            ></motion.div>
                         </div>
                     </div>
                 </div>

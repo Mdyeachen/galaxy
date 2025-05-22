@@ -10,7 +10,7 @@ const Tab = ({icon, title, status, isSelected, onSelect}) => {
 
     const xPersent = useMotionValue(0);
     const yPersent = useMotionValue(0);
-    const maskImage = useMotionTemplate`radial-gradient(40px 40px at ${xPersent}% ${yPersent}%,black,transparent)`
+    const maskImage = useMotionTemplate`radial-gradient(50px 50px at ${xPersent}% ${yPersent}%,black,transparent)`
 
 
     // tab animate//
